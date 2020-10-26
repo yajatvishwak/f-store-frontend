@@ -1,0 +1,90 @@
+.demo-1 {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Staatliches", cursive;
+  font-size: 10px;
+  margin: 20px;
+}
+.demo-2 {
+  height: 60px;
+  font-family: "Staatliches", cursive;
+  font-size: 50px;
+  margin: 20px;
+}
+.download {
+  padding: 20px;
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  background-color: black;
+  align-self: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.download:hover {
+  background-color: gray;
+}
+
+.properties {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 20px;
+  flex-wrap: wrap;
+  font-family: "Staatliches", cursive;
+}
+
+.demo-1 span {
+  font-size: 5em;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -moz-animation: demo-1 20s linear infinite;
+  -webkit-animation: demo-1 20s linear infinite;
+  animation: demo-1 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes demo-1 {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes demo-1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes demo-1 {
+  0% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
